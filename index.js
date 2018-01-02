@@ -3,8 +3,6 @@ let ALERT_INTERVAL_IN_SECS = 30;
 let TEMPLATE = '<div id="digits"><span class="js-timer-minutes ">00</span>' +
   ':<span class="js-timer-seconds">00</span><div>';
 
-// TODO: ковычки, рефактор и тд.
-
 function padZero(number) {
   return ("00" + String(number)).slice(-2);
 }
@@ -27,10 +25,10 @@ function createStyleTagForBlinkingTime() {
     " @keyframes blinker { 50% { opacity: 0; }}";
   let cssFontForDigits = "@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');";
   let css = cssFontForDigits + " " + cssBlinkerDigitsAnimation;
-  let head = document.head || document.getElementsByTagName('head')[0];
-  let style = document.createElement('style');
+  let head = document.head || document.getElementsByTagName("head")[0];
+  let style = document.createElement("style");
 
-  style.type = 'text/css';
+  style.type = "text/css";
   style.appendChild(document.createTextNode(css));
   head.appendChild(style);
 }
@@ -93,23 +91,23 @@ class TimerWidget {
       this.unmount();
 
     // adds HTML timer div to current page
-    this.timerContainer = document.createElement('div');
+    this.timerContainer = document.createElement("div");
     let styleForTimeContainer = "font-family: 'Share Tech Mono', monospace;" +
       "box-shadow: 0 5px 3px -3px black; font-family: 'Share Tech Mono', monospace; " +
       "display: inline-block; border: 5px double #bd8282; border-radius: 10px; " +
-      "background-color: brown; font-size: 15px;";
+      "background-color: brown; position: fixed; left: 5px; top: 40px;";
     this.timerContainer.setAttribute("style", styleForTimeContainer);
 
     this.timerContainer.innerHTML = TEMPLATE;
     rootTag.insertBefore(this.timerContainer, rootTag.firstChild);
 
     let styleForDigitsContainer = "padding: 3px 4px; display: inline-block; border-radius: 10px;" +
-      "background-color: #23221d; color: white; font-size: 30px;";
+      "background-color: #23221d; color: white; font-size: 25px;";
     this.digitsContainer = document.getElementById("digits");
     this.digitsContainer.setAttribute("style", styleForDigitsContainer);
 
-    this.minutes_element = this.timerContainer.getElementsByClassName('js-timer-minutes')[0];
-    this.seconds_element = this.timerContainer.getElementsByClassName('js-timer-seconds')[0];
+    this.minutes_element = this.timerContainer.getElementsByClassName("js-timer-minutes")[0];
+    this.seconds_element = this.timerContainer.getElementsByClassName("js-timer-seconds")[0];
   }
 
   update(secsLeft) {
@@ -195,4 +193,4 @@ function main() {
 }
 
 // initialize timer when page ready for presentation
-window.addEventListener('load', main);
+window.addEventListener("load", main);
