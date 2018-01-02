@@ -119,6 +119,7 @@ class TimerWidget {
     this.seconds_element.innerHTML = padZero(seconds);
 
     if (timeIsOut && !this.isInAlertingMode) {
+      this.isInAlertingMode = true;
       this.minutes_element.setAttribute("class", this.blinkCssClass);
       this.seconds_element.setAttribute("class", this.blinkCssClass);
     }
