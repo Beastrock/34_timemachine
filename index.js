@@ -20,7 +20,7 @@ function getRandomMotivatingQuote() {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-function createStyleTagForBlinkingTime() {
+function createStyleTagForBlinkingClassAndDigitsFont() {
   let cssBlinkerDigitsAnimation = ".blinker { animation: blinker 1s linear infinite; }" +
     " @keyframes blinker { 50% { opacity: 0; }}";
   let cssFontForDigits = "@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');";
@@ -140,7 +140,7 @@ function main() {
   let tickIntervalId, timeOutIntervalId;
   tickIntervalId = timeOutIntervalId = null;
 
-  createStyleTagForBlinkingTime();
+  createStyleTagForBlinkingClassAndDigitsFont();
 
   timerWidget.mount(document.body);
 
