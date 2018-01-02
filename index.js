@@ -95,7 +95,7 @@ class TimerWidget {
     let styleForTimeContainer = "font-family: 'Share Tech Mono', monospace;" +
       "box-shadow: 0 5px 3px -3px black; font-family: 'Share Tech Mono', monospace; " +
       "display: inline-block; border: 5px double #bd8282; border-radius: 10px; " +
-      "background-color: brown; position: fixed; left: 5px; top: 40px;";
+      "background-color: brown; position: fixed; left: 3px; top: 40px; z-index: 10;";
     this.timerContainer.setAttribute("style", styleForTimeContainer);
 
     this.timerContainer.innerHTML = TEMPLATE;
