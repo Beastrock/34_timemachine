@@ -7,7 +7,7 @@ This project helps to control time was spent on sites. It requires special exten
 + Install extension for Chrome browser [Custom JavaScript for websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija)
 + Open configuration of [cjs](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija) browser extension on the site you want to control.
 + Click on the link "your own external scripts", add path of [script](https:////cdn.rawgit.com/Beastrock/34_timemachine/fadf2e23/index.js) hosted on [RawGit](https://rawgit.com/):
-`https://cdn.rawgit.com/Beastrock/34_timemachine/fadf2e23/index.js`
+`https://cdn.rawgit.com/Beastrock/34_timemachine/09479d50/index.js`
 
 Don`t forget to press "enable cjs for this host" to enable custom JS.
 
